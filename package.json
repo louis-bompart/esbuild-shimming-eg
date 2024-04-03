@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "http-server",
+    "start": "http-server --cors",
     "prestart": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm run build:noshim && npm run build:shim",

@@ -953,7 +953,7 @@
   init_shim();
   var myAbortCtrl = new import_cjs_ponyfill.AbortController();
   (async () => {
-    const result = await fetch2("foo.json", { signal: myAbortCtrl.signal });
+    const result = await fetch2("http://127.0.0.1:8080/foo.json", { signal: myAbortCtrl.signal });
     console.log(await result.text());
   })();
 })();
