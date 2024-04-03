@@ -1,0 +1,20 @@
+{
+  "name": "shimming",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run build:noshim && npm run build:shim",
+    "build:noshim": "npx esbuild --bundle ./index.js > without-shim.js",
+    "build:shim": "npx esbuild --inject:./shim.js --bundle ./index.js > with-shim.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "abortcontroller-polyfill": "^1.7.5",
+    "esbuild": "^0.20.2"
+  }
+}
