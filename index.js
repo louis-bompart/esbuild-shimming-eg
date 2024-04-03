@@ -1,2 +1,5 @@
 const myAbortCtrl = new AbortController();
-fetch('https://perdu.com', {signal: myAbortCtrl.signal})
+(async ()=> {
+    const result =await fetch('foo.json', {signal: myAbortCtrl.signal })
+    console.log(await result.text());
+})()

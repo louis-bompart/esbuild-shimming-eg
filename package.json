@@ -5,6 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "start": "http-server",
+    "prestart": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm run build:noshim && npm run build:shim",
     "build:noshim": "npx esbuild --bundle ./index.js > without-shim.js",
@@ -15,6 +17,9 @@
   "license": "ISC",
   "devDependencies": {
     "abortcontroller-polyfill": "^1.7.5",
-    "esbuild": "^0.20.2"
+    "esbuild": "^0.20.2",
+    "http-server": "^14.1.1",
+    "node-fetch": "^3.3.2",
+    "whatwg-fetch": "^3.6.20"
   }
 }
